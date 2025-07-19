@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricmania - Growing the Future of Agriculture</title>
+    <!-- Load Tailwind CSS via CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally and set a default background/text color */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        /* Custom CSS for smooth scrolling when clicking on navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-green-700 p-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Brand Name/Logo -->
+            <a href="#home" class="text-white text-3xl font-bold tracking-wider rounded-lg p-2 hover:bg-green-600 transition duration-300">
+                Agricmania
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">Home</a>
+                <a href="#about" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">About Us</a>
+                <a href="#crops" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">Crops</a>
+                <a href="#livestock" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">Livestock</a>
+                <a href="#products" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">Products</a>
+                <a href="#contact" class="text-white hover:text-green-200 text-lg font-medium transition duration-300 p-2 rounded-md hover:bg-green-600">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-green-800 mt-4 rounded-lg shadow-inner">
+            <a href="#home" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">Home</a>
+            <a href="#about" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">About Us</a>
+            <a href="#crops" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">Crops</a>
+            <a href="#livestock" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">Livestock</a>
+            <a href="#products" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">Products</a>
+            <a href="#contact" class="block text-white px-4 py-3 text-lg font-medium hover:bg-green-700 rounded-md transition duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative bg-gradient-to-r from-green-600 to-green-800 text-white py-32 md:py-48 flex items-center justify-center min-h-screen-75 overflow-hidden">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF/png?text=Agricmania+Farm');"></div>
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Dark overlay for text readability -->
+
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Agricmania: Cultivating Growth, Harvesting Success
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                Your trusted partner in sustainable agriculture, from farm to market.
+            </p>
+            <a href="#products" class="bg-yellow-400 text-green-900 font-bold py-4 px-10 rounded-full text-lg md:text-xl hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg animate-fade-in-up delay-400">
+                Explore Our Products
+            </a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12">About Agricmania</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/A8DADC/2F4F4F?text=Our+Vision" alt="Agricmania Vision" class="rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-6">
+                        Agricmania is dedicated to revolutionizing the agricultural landscape through sustainable practices, innovative farming techniques, and efficient market linkages. We believe in harnessing the power of nature to provide high-quality, nutritious produce and healthy livestock to communities across Nigeria and beyond.
+                    </p>
+                    <p class="mb-6">
+                        Our journey began with a passion for agriculture and a commitment to empowering local farmers. We work hand-in-hand with our partners, ensuring fair practices and fostering growth at every stage of the value chain.
+                    </p>
+                    <p>
+                        From cultivation to consumption, Agricmania stands for quality, integrity, and a greener future. Join us in our mission to feed the world sustainably.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Section -->
+    <section id="crops" class="py-16 md:py-24 bg-green-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12">Our Crops</h2>
+            <p class="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                At Agricmania, we cultivate a diverse range of staple and specialized crops using modern, eco-friendly farming methods. Our focus is on yield, quality, and environmental stewardship.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Crop Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/B0E0E6/2F4F4F?text=Maize" alt="Maize Crop" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Maize</h3>
+                    <p class="text-gray-600 mb-4">
+                        High-yield maize, carefully grown for both human consumption and livestock feed.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+                <!-- Crop Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/F0E68C/2F4F4F?text=Cassava" alt="Cassava Crop" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Cassava</h3>
+                    <p class="text-gray-600 mb-4">
+                        Premium quality cassava, a versatile root crop essential for various food products.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+                <!-- Crop Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/DDA0DD/2F4F4F?text=Vegetables" alt="Vegetables" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Fresh Vegetables</h3>
+                    <p class="text-gray-600 mb-4">
+                        A wide assortment of fresh, organic vegetables, harvested daily for maximum freshness.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Livestock Section -->
+    <section id="livestock" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12">Our Livestock</h2>
+            <p class="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                Agricmania is committed to ethical and humane livestock farming, ensuring healthy animals and high-quality products.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Livestock Card 1: Poultry -->
+                <div class="bg-green-50 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/FFDAB9/2F4F4F?text=Poultry" alt="Poultry" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Poultry Production</h3>
+                    <p class="text-gray-600 mb-4">
+                        Free-range poultry, providing fresh eggs and high-quality poultry meat.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+                <!-- Livestock Card 2: Goat Farming -->
+                <div class="bg-green-50 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/D2B48C/2F4F4F?text=Goats" alt="Goat Farming" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Goat Farming</h3>
+                    <p class="text-gray-600 mb-4">
+                        Healthy goats raised for meat and dairy, contributing to sustainable livelihoods.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+                <!-- Livestock Card 3: Piggery -->
+                <div class="bg-green-50 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/F4A460/2F4F4F?text=Piggery" alt="Piggery" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Piggery</h3>
+                    <p class="text-gray-600 mb-4">
+                        Modern piggery operations focused on healthy growth and quality pork products.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Agric Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-green-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12">Marketing Agric Products</h2>
+            <p class="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                Agricmania connects farmers with markets, ensuring fair prices and timely delivery of premium agricultural products to consumers and businesses.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Marketing Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/D8BFD8/2F4F4F?text=Wholesale" alt="Wholesale Distribution" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Wholesale Distribution</h3>
+                    <p class="text-gray-600 mb-4">
+                        Reliable wholesale supply of fresh crops and livestock products to businesses.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Inquire Now</a>
+                </div>
+                <!-- Product Marketing Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/FFE4B5/2F4F4F?text=Retail" alt="Retail Sales" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Direct-to-Consumer Sales</h3>
+                    <p class="text-gray-600 mb-4">
+                        Fresh farm produce delivered directly to your doorstep or available at our outlets.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Shop Now</a>
+                </div>
+                <!-- Product Marketing Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/300x200/C0C0C0/2F4F4F?text=Export" alt="Export Services" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-2">Export Services</h3>
+                    <p class="text-gray-600 mb-4">
+                        Facilitating the export of Nigerian agricultural products to international markets.
+                    </p>
+                    <a href="#contact" class="bg-green-500 text-white py-2 px-6 rounded-full hover:bg-green-600 transition duration-300 text-sm">Partner With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-green-800 mb-12">Get in Touch</h2>
+            <div class="max-w-3xl mx-auto bg-green-50 rounded-2xl shadow-lg p-8 md:p-12 text-center">
+                <p class="text-lg text-gray-700 mb-8">
+                    Have questions or want to partner with Agricmania? Reach us directly via:
+                </p>
+                <div class="text-center mt-10 text-gray-600">
+                    <p class="mb-2 text-xl"><strong>Email:</strong> <a href="mailto:agricmania@gmail.com" class="text-green-700 hover:underline">agricmania@gmail.com</a></p>
+                    <p class="text-xl"><strong>Phone:</strong> <a href="tel:+2349031113651" class="text-green-700 hover:underline">+234 903 111 3651</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-10">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-lg mb-4">&copy; 2025 Agricmania. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Facebook</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Twitter</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Instagram</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        // Get references to the mobile menu button and the mobile menu itself
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Add an event listener to the mobile menu button to toggle the menu's visibility
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggles the 'hidden' class on the mobile menu
+        });
+
+        // Add event listeners to all links inside the mobile menu
+        // This ensures the menu closes when a link is clicked (for better UX)
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden'); // Hide the mobile menu after a link is clicked
+            });
+        });
+    </script>
+
+</body>
+</html>
